@@ -16,7 +16,7 @@ var router = express.Router();
 var port = process.env.API_PORT || 3001;
 
 //db config
-mongoose.connect(`mongodb://${process.env.USERNAME}:${process.env.PWRD}@ds155028.mlab.com:55028/${process.env.DB_NAME}`);
+mongoose.connect(`mongodb://${process.env.USERNAME}:${process.env.PWRD}@ds1${process.env.DB_HOST_NUMBER}.mlab.com:${process.env.DB_HOST_NUMBER}/${process.env.DB_NAME}`);
 
 //now we should configure the API to use bodyParser and look for
 //JSON data in the request body
