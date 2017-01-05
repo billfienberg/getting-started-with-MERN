@@ -1,6 +1,6 @@
 //CommentForm.js
 import React, { Component } from 'react';
-import style from './style';
+import style from '../style';
 
 class CommentForm extends Component {
   constructor(props) {
