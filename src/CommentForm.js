@@ -5,7 +5,7 @@ import style from './style';
 class CommentForm extends Component {
   constructor(props) {
     super(props);
-    this.state = { author: ‘’, text: ‘’ };
+    this.state = { author: '', text: '' };
     this.handleAuthorChange = this.handleAuthorChange.bind(this);
     this.handleTextChange = this.handleTextChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -29,23 +29,23 @@ class CommentForm extends Component {
     return (
       <form style={ style.commentForm } onSubmit={ this.handleSubmit }>
         <input
-          type=’text’
-          placeholder=’Your name…’
+          type='text'
+          placeholder='Your name…'
           style={ style.commentFormAuthor}
           value={ this.state.author }
           onChange={ this.handleAuthorChange }
         />
         <input
-          type=’text’
-          placeholder=’Say something…’
+          type='text'
+          placeholder='Say something…'
           style={ style.commentFormText}
           value={ this.state.text }
           onChange={ this.handleTextChange }
         />
         <input
-          type=’submit’
+          type='submit'
           style={ style.commentFormPost }
-          value=’Post’
+          value='Post'
         />
       </form>
     )
