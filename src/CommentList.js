@@ -1,7 +1,7 @@
 //CommentList.js
-import React, { Component } from ‘react’;
-import Comment from ‘./Comment’;
-import style from ‘./style’;
+import React, { Component } from 'react';
+import Comment from './Comment';
+import style from './style';
 
 class CommentList extends Component {
  render() {
@@ -9,11 +9,12 @@ class CommentList extends Component {
      {
        return (
          <Comment author={ comment.author } key={ comment.id }>
-         { comment.text}
+          { comment.text}
          </Comment>
        )
      }
    )
+   
    return (
     <div style={ style.commentList }>
       { commentNodes }
