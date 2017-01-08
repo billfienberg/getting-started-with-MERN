@@ -4,23 +4,24 @@ import Comment from './Comment';
 import style from '../style';
 
 class CommentList extends Component {
- render() {
-   let commentNodes = this.props.data.map(comment =>
-     {
-       return (
-         <Comment author={ comment.author } key={ comment._id }>
+  render() {
+    let commentNodes = this.props.data.map(comment => {
+      // console.group("comment")
+      // console.log("comment: ", comment)
+      // console.groupEnd()
+      return (
+        <Comment author={ comment.author } key={ comment._id }>
           { comment.text}
-         </Comment>
-       )
-     }
-   )
+        </Comment>
+      )
+    })
 
-   return (
-    <div style={ style.commentList }>
-      { commentNodes }
-    </div>
-  )
- }
+    return (
+      <div style={ style.commentList }>
+        { commentNodes }
+      </div>
+    )
+  }
 }
 
 export default CommentList;
