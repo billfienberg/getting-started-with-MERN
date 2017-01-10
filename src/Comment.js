@@ -14,6 +14,8 @@ class Comment extends Component {
       <div style={ style.comment }>
         <h3>{this.props.author}</h3>
         <span dangerouslySetInnerHTML={ this.rawMarkup() } />
+        <a style={ style.updateLink } href='#' onClick={() => console.log('Update')} >update</a>
+        <a style={ style.deleteLink } href='#' onClick={() => console.log('Delete')} >delete</a>
       </div>
     )
   }
