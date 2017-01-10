@@ -10,7 +10,13 @@ class CommentList extends Component {
       // console.log("comment: ", comment)
       // console.groupEnd()
       return (
-        <Comment author={ comment.author } key={ comment._id }>
+        <Comment
+          author={ comment.author }
+          uniqueId={ comment._id }
+          onCommentUpdate={ this.props.onCommentUpdate }
+          onCommentDelete={ this.props.onCommentDelete }
+          key={ comment._id }
+        >
           { comment.text}
         </Comment>
       )
